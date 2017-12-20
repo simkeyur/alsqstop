@@ -1,6 +1,6 @@
 body {
   font-family: 'Lora';
-  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg2.jpg");
+  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg1.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -31,6 +31,27 @@ p {
   font-family: 'Raleway';
 }
 
+.site-heading-upper {
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.site-heading-lower {
+  font-size: 4rem;
+  font-weight: 200;
+  line-height: 4rem;
+}
+
+@media (min-width: 992px) {
+  .site-heading {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: 'Raleway';
+}
+
 .site-heading .site-heading-upper {
   display: block;
   font-size: 2rem;
@@ -41,6 +62,7 @@ p {
   font-size: 5rem;
   font-weight: 100;
   line-height: 4rem;
+}
 }
 
 .page-section {
@@ -246,4 +268,9 @@ p {
 
 .font-weight-light {
   font-weight: 100 !important;
+}
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }
