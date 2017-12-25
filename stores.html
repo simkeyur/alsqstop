@@ -37,48 +37,18 @@
     <section class="page-section cta">
         <div class="container-fluid">
 
-	<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 project wow animated animated4 fadeInLeft"  style="background-image: url('d/shop3.JPG');">
-        <div class="project-hover">
-        	<h2>Dunmore, PA</h2><hr />
-            <p><span class="section-heading-lower">1172 E Drinker St</span></p>
-            <a href="tel:570-342-6575">PH: 570-342-6575</a>
+            
+    <!--Ng-repeat functionality-->
+    <div ng-repeat="store in stores">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 project wow animated animated4 fadeInLeft"  style="background-image: url('{{store.img}}');">
+            <div class="project-hover">
+                <h2>{{store.location}}</h2><hr />
+                <p><span class="section-heading-lower">{{store.address}}<br/>{{store.zipcode}}</span></p>
+                <a href="tel:{{store.phone}}">PH: {{store.phone}}</a>
+            </div>
         </div>
     </div>
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 project wow animated animated4 fadeInLeft"  style="background-image: url('d/Elmhurst2.JPG');">
-        <div class="project-hover">
-        	<h2>Dunmore, PA</h2><hr />
-            <p><span class="section-heading-lower">1172 E Drinker St</span></p>
-            <a href="tel:570-342-6575">PH: 570-342-6575</a>
-        </div>
-    </div>
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 project wow animated animated4 fadeInLeft"  style="background-image: url('d/shop2Drinker.JPG');">
-        <div class="project-hover">
-        	<h2>Dunmore, PA</h2><hr />
-            <p><span class="section-heading-lower">1172 E Drinker St</span></p>
-            <a href="tel:570-342-6575">PH: 570-342-6575</a>
-        </div>
-    </div>
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 project wow animated animated4 fadeInLeft"  style="background-image: url('d/shop7[1].JPG');">
-        <div class="project-hover">
-        	<h2>Dunmore, PA</h2><hr />
-            <p><span class="section-heading-lower">1172 E Drinker St</span></p>
-            <a href="tel:570-342-6575">PH: 570-342-6575</a>
-        </div>
-    </div>
-	<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 project wow animated animated4 fadeInLeft"  style="background-image: url('d/shop8[1].JPG');">
-        <div class="project-hover">
-        	<h2>Dunmore, PA</h2><hr />
-            <p><span class="section-heading-lower">1172 E Drinker St</span></p>
-            <a href="tel:570-342-6575">PH: 570-342-6575</a>
-        </div>
-    </div>
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 project wow animated animated4 fadeInLeft"  style="background-image: url('d/Elmhurst2.JPG');">
-        <div class="project-hover">
-        	<h2>Dunmore, PA</h2><hr />
-            <p><span class="section-heading-lower">1172 E Drinker St</span></p>
-            <a href="tel:570-342-6575">PH: 570-342-6575</a>
-        </div>
-    </div>
+    
     <div class="clearfix"></div>
 </div>
         <br/><br/><br/>
@@ -120,20 +90,7 @@
                   <span class="ml-auto">9:00 AM to 5:00 PM</span>
                 </li>
               </ul>
-              <p class="address mb-5">
-                <em>
-                  <strong>1116 Orchard Street</strong>
-                  <br>
-                  Golden Valley, Minnesota
-                </em>
-              </p>
-              <p class="mb-0">
-                <small>
-                  <em>Call Anytime</em>
-                </small>
-                <br>
-                (317) 585-8468
-              </p>
+              
             </div>
           </div>
         </div>
