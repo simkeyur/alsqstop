@@ -13,7 +13,7 @@ app.controller('mainCtrl', function($scope, $http) {
     }
 
 
-    var stores = [
+    $scope.stores = [
         { location: "Elmhurst, PA", address: "554 State Route #435", zipcode: "18444", phone: "5708424054", img: "d/shop_1.jpg" },
         { location: "Dunmore, PA", address: "1172 E Drinker St", zipcode: "18512", phone: "5703426575", img: "d/shop_2.jpg" },
         { location: "Covington, PA", address: "10 Scranton Pocono Hwy", zipcode: "18424", phone: "5708426214", img: "d/shop_3.jpg" },
