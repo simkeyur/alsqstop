@@ -12,6 +12,7 @@ app.controller('mainCtrl', function($scope, $http) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
+
     var stores = [
         { location: "Elmhurst, PA", address: "554 State Route #435", zipcode: "18444", phone: "5708424054", img: "d/shop_1.jpg" },
         { location: "Dunmore, PA", address: "1172 E Drinker St", zipcode: "18512", phone: "5703426575", img: "d/shop_2.jpg" },
