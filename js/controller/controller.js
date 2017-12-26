@@ -4,7 +4,6 @@ app.controller('mainCtrl', function($scope, $http) {
 
     var currentTime = new Date();
     $scope.CurrentYear = currentTime.getFullYear();
-    $scope.stores = stores;
 
     function getRandomVal(min, max) {
         min = Math.ceil(min);
