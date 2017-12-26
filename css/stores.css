@@ -1,67 +1,114 @@
-.title-arch {
-		text-align: center;
-		margin: 50px 0;
-		font-size: 22px;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-	}
-.project {
-	width: 100%;
-	height: 500px;
-	background-size: cover;
-	background-position: center;
-	padding: 0 !important;
-	float:left;
+html {
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 
-
-.project-hover {
-	width: 100%;
-	height: 100%;
-	color: #fff;
-	opacity: 0;
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-	background-color: rgba(186, 232, 2, 0.7);
-	padding: 40% 30px !important;
+h5 {
+    font-size: 1.28571429em;
+    font-weight: 700;
+    line-height: 1.2857em;
+    margin: 0;
 }
 
-.project-hover hr {
-	height: 30px;
-	width: 0;
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-	background-color: rgba(255, 255, 255, 1);
-	border: 0;
+.card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
 }
 
-.project-hover a {
-	color: rgba(255, 255, 255, 1);
-	padding: 2px 22px;
-	line-height: 40px;
-	border: 2px solid rgba(255, 255, 255, 1);
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
+.card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
 }
 
-.project-hover a:hover {
-	border-color: rgba(51, 51, 51, 1);
-	color: rgba(51, 51, 51, 1);
-	background-color: #FFF;
+.card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
-.project:hover .project-hover {
-	opacity: 1;
+.card-title {
+    font-size: 1.28571429em;
+    font-weight: 700;
+    line-height: 1.2857em;
 }
 
-.project:hover .project-hover hr {
-	width: 100%;
-	height: 5px;
+.card-text {
+    clear: both;
+    margin-top: .5em;
+    color: rgba(0, 0, 0, .68);
 }
 
+.card-footer {
+    font-size: 1em;
+    position: static;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    padding: .75em 1em;
+    color: rgba(0, 0, 0, .4);
+    border-top: 1px solid rgba(0, 0, 0, .05) !important;
+    background: #fff;
+}
+
+.card-inverse .btn {
+    border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.profile {
+    position: absolute;
+    top: -20px;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.profile-avatar {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.profile-inline {
+    position: relative;
+    top: 0;
+    display: inline-block;
+}
+
+.profile-inline ~ .card-title {
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: top;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.meta {
+    font-size: 1em;
+    color: rgba(0, 0, 0, .4);
+}
+
+.meta a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, .4);
+}
+
+.meta a:hover {
+    color: rgba(0, 0, 0, .87);
+}
