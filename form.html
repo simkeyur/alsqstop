@@ -1,25 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Customer Reward Form</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/business-casual.css" rel="stylesheet">
-
+    <title>Post to Google Sheet Demo</title>
     <!-- bootstrap & fontawesome css -->
     <link href="http://cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.min.css" />
@@ -34,6 +17,7 @@
     <!-- BootstrapValidator JS -->
     <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
 
+    <!-- Animated Loading Icon -->
     <style type="text/css">
         .glyphicon-refresh-animate {
             -animation: spin .7s infinite linear;
@@ -58,105 +42,81 @@
             }
         }
     </style>
-
 </head>
 
-<body ng-app="alsqstop" ng-controller="mainCtrl" class="ng-cloak">
+<body>
+    </head>
 
-    <!-- Navigation -->
-    <div ng-include="'includes/navbar.html'"></div>
-    <br/><br/>
-    <h1 class="site-heading-lower text-center text-white d-none d-lg-block">{{CompanyName}}</h1>
-    <h1 class="site-heading-upper text-center text-primary mb-3">Customer Information</h1>
-
-
-    <form class="well form-horizontal" role="form" id="test-form">
-        <fieldset>
-
-            <!-- Form Name -->
-            <legend>Customer Reward Information</legend>
-
-            <!-- Text input-->
-
-            <div class="form-group">
-                <label class="col-md-4 control-label">First Name</label>
-                <div class="col-md-4 inputGroupContainer">
-                    <div class="input-group">
-                        <input name="first_Name" class="form-control" placeholder="First Name" class="form-control" type="text">
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Post to Google Sheets with form validation</h2>
+                    <p>
+                        Based on Martin Hawksey's <a href="http://mashe.hawksey.info/2014/07/google-sheets-as-a-database-insert-with-apps-script-using-postget-methods-with-ajax-example/" target="_blank">example</a>.
+                        <p>
+                </div>
+            </div>
+            <hr>
+            <form class="form-horizontal" role="form" id="test-form">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">First Name</label>
+                    <div class="col-lg-3 inputGroupContainer">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="firstName" placeholder="First Name" />
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Text input-->
-
-            <div class="form-group">
-                <label class="col-md-4 control-label">Last Name</label>
-                <div class="col-md-4 inputGroupContainer">
-                    <div class="input-group">
-                        <input name="last_Name" placeholder="Last Name" class="form-control" type="text">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Last Name</label>
+                    <div class="col-lg-3 inputGroupContainer">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="lastName" placeholder="Last Name" />
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label">E-Mail</label>
-                <div class="col-md-4 inputGroupContainer">
-                    <div class="input-group">
-                        <input name="email" placeholder="E-Mail Address" class="form-control" type="text">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Email</label>
+                    <div class="col-lg-3 inputGroupContainer">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="email" placeholder="name@domain.com" />
+                        </div>
                     </div>
                 </div>
-            </div>
 
-
-            <!-- Text input-->
-
-            <div class="form-group">
-                <label class="col-md-4 control-label">Phone Number</label>
-                <div class="col-md-4 inputGroupContainer">
-                    <div class="input-group">
-                        <input name="phone_Number" placeholder="(845)555-1212" class="form-control" type="text">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Address</label>
+                    <div class="col-lg-3 inputGroupContainer">
+                        <div class="input-group col-lg-10">
+                            <textarea type="text" class="form-control" name="address" placeholder="Enter your address here" rows="4" style="resize: vertical;"></textarea>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Text input-->
-
-            <div class="form-group">
-                <label class="col-md-4 control-label">Reciept Number</label>
-                <div class="col-md-4 inputGroupContainer">
-                    <div class="input-group">
-                        <input name="reciept_number" placeholder="enter the number about receipt" class="form-control" type="text">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Notes</label>
+                    <div class="col-lg-3 inputGroupContainer">
+                        <div class="input-group col-lg-10">
+                            <textarea type="text" class="form-control" name="notes" placeholder="Comments or questions?" rows="4" style="resize: vertical;"></textarea>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-
-            <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label"></label>
-                <div class="col-md-4">
-                    <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
+                <div class="form-group">
+                    <div class="col-lg-9 col-lg-offset-3">
+                        <button type="submit" class="btn btn-default" id="postForm">Submit</button>
+                    </div>
                 </div>
-            </div>
 
-        </fieldset>
-    </form>
-    </div>
+            </form>
 
-    <!-- Footer -->
-    <div ng-include="'includes/footer.html'"></div>
+        </div>
+    </body>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Angular 1.6 -->
-    <script src="vendor/angular/angular.js"></script>
-    <script src="js/controller/controller.js"></script>
-
-    <!-- Validation js -->
-    <script src="js/controller/validation-functions.js"></script>
-
-</body>
+    <footer>
+        <script src="js/controller/validation-functions.js"></script>
+    </footer>
 
 </html>
