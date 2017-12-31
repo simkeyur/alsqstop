@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Customer Reward Form</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.css" rel="stylesheet">
+
+    <!-- bootstrap & fontawesome css -->
+    <link href="http://cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.min.css" />
+
+    <!-- BootstrapValidator CSS -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css" />
+
+    <!-- jQuery and Bootstrap JS -->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- BootstrapValidator JS -->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
+
+    <style type="text/css">
+        .glyphicon-refresh-animate {
+            -animation: spin .7s infinite linear;
+            -webkit-animation: spin2 .7s infinite linear;
+        }
+        
+        @-webkit-keyframes spin2 {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            from {
+                transform: scale(1) rotate(0deg);
+            }
+            to {
+                transform: scale(1) rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body ng-app="alsqstop" ng-controller="mainCtrl" class="ng-cloak">
+
+    <!-- Navigation -->
+    <div ng-include="'includes/navbar.html'"></div>
+    <br/><br/>
+    <h1 class="site-heading-lower text-center text-white d-none d-lg-block">{{CompanyName}}</h1>
+    <h1 class="site-heading-upper text-center text-primary mb-3">Customer Information</h1>
+
+
+    <form class="well form-horizontal" role="form" id="test-form">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Customer Reward Information</legend>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">First Name</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <input name="first_Name" class="form-control" placeholder="First Name" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Last Name</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <input name="last_Name" placeholder="Last Name" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">E-Mail</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <input name="email" placeholder="E-Mail Address" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Phone Number</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <input name="phone_Number" placeholder="(845)555-1212" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Reciept Number</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <input name="reciept_number" placeholder="enter the number about receipt" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+    </div>
+
+    <!-- Footer -->
+    <div ng-include="'includes/footer.html'"></div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Angular 1.6 -->
+    <script src="vendor/angular/angular.js"></script>
+    <script src="js/controller/controller.js"></script>
+
+    <!-- Validation js -->
+    <script src="js/controller/validation-functions.js"></script>
+
+</body>
+
+</html>
