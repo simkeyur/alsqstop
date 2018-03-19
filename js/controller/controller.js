@@ -1,6 +1,6 @@
 var app = angular.module('alsqstop', []);
 app.controller('mainCtrl', function($scope, $http) {
-    $scope.CompanyName = "ALS Quick Mart";
+    $scope.CompanyName = "ALS Quick Stop";
 
     var currentTime = new Date();
     $scope.CurrentYear = currentTime.getFullYear();
